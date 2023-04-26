@@ -19,4 +19,7 @@ export class PostsComponent implements OnInit {
     this.posts = this.dataService.getPosts();
   }
 
+  escuchaClick(id: number) {
+    console.log("ID", id);
+  }
 }
