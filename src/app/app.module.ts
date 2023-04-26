@@ -7,16 +7,17 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { HomeComponent } from './pages/home/home.component';
 
 import {AppRoutingModule} from "./app-routing/app-routing.module";
+import { MenuComponent } from './components/menu/menu.component';
+import {PagesModule} from "./pages/pages.module";
 
 @NgModule({
   declarations: [
     AppComponent,
-    AboutComponent,
-    ContactComponent,
-    HomeComponent
+    MenuComponent
   ],
   imports: [
     BrowserModule,
+    PagesModule,
     AppRoutingModule
   ],
   providers: [],
