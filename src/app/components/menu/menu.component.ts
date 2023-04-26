@@ -18,6 +18,10 @@ export class MenuComponent {
     {
       name: 'Contact',
       path: '/contact'
+    },
+    {
+      name: 'Post',
+      path: '/posts'
     }
   ]
 }

@@ -1,5 +1,4 @@
 import {NgModule} from '@angular/core';
-import {CommonModule} from '@angular/common';
 
 import {Routes, RouterModule} from '@angular/router';
 import {HomeComponent} from "../pages/home/home.component";
@@ -21,8 +20,8 @@ const routes: Routes = [
   },
   {
     path: 'posts',
-    //loadChildren: './pages/posts/posts.module#PostsModule'
     loadChildren: () => import('../pages/posts/posts.module').then(m => m.PostsModule)
+    //loadChildren: './pages/posts/posts.module#PostsModule'
   },
   {
     path: "**",
