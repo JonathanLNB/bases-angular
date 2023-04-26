@@ -1,10 +1,25 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {DataService} from "../../services/data.service";
 
 @Component({
   selector: 'app-posts',
   templateUrl: './posts.component.html',
   styleUrls: ['./posts.component.css']
 })
-export class PostsComponent {
+export class PostsComponent implements OnInit {
+
+  posts: any = [];
+
+  constructor(
+    private dataService: DataService
+  ) {
+  }
+
+  ngOnInit(): void {
+    this.dataService.getPosts().subscribe((posts: any) => {
+      console.log(posts);
+      this.posts = posts
+    });
+  }
 
 }

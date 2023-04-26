@@ -9,6 +9,7 @@ import { HomeComponent } from './pages/home/home.component';
 import {AppRoutingModule} from "./app-routing/app-routing.module";
 import { MenuComponent } from './components/menu/menu.component';
 import {PagesModule} from "./pages/pages.module";
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import {PagesModule} from "./pages/pages.module";
   imports: [
     BrowserModule,
     PagesModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
